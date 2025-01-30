@@ -6,19 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio site</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/efdee89baf.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <div id="header">
         <div class="container">
         <nav> 
             <img src="images/logo.png" class="logo">
-            <ul>
+            <ul id="sidemenu">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Services</a></li>
                 <li><a href="#">Portfolio</a></li>
                 <li><a href="#">Contact</a></li>
+                <i class="fas solid fa-circle-xmark" onclick="closemenu()"></i>
             </ul>
+            <i class="fas solid fa-bars" onclick="openmenu()"></i>
         </nav>
             <div class="header-text">
             <p>UI/UX Designer</p>
@@ -26,10 +30,9 @@
             </h1>
             </div>
         </div>
-     </div>
     </div>
 
-<!--This is the about section-->    
+ <!--------------------This is the About section--------------------------------->   
 
     <div id="about">
         <div class="container">
@@ -42,35 +45,158 @@
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis, quia maxime. Doloremque quidem dolorem numquam aliquid sint, soluta ipsum consequuntur dolore fugit est itaque eius deserunt debitis esse ea qui.</p>
                 
                     <div class="tab-titles">
-                        <p class="tab-links active-link">Skills</p>
-                        <p class="tab-links">Experience</p>
-                        <p class="tab-links">Education</p>
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
                     </div>
-                    <div class="tab-contents">
+                    <div class="tab-contents active-tab" id="skills">
                         <ul>
                             <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
                             <li><span>Web Development</span><br>Web app Development</li>
                             <li><span>App Development</span><br>Building Android/IOS apps</li>
                         </ul>
                     </div>
-                    <div class="tab-contents">
+                    <div class="tab-contents" id="experience">
                         <ul>
-                            <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
-                            <li><span>Web Development</span><br>Web app Development</li>
-                            <li><span>App Development</span><br>Building Android/IOS apps</li>
+                            <li><span>2024</span><br>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</li>
+                            <li><span>2023</span><br>Lorem ipsum.</li>
+                            <li><span>2015-2020</span><br>Bmet consectetur adipisicing elit. Perspiciatis, quia maxime. Doloremque quidem dolorem numquam aliquid sint, soluta ipsum consequuntur dolore fugit est itaque eius deserunt debitis esse ea qui.</p>
+                            </li>
                         </ul>
                     </div>
-                    <div class="tab-contents">
+                    <div class="tab-contents" id="education">
                         <ul>
-                            <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
-                            <li><span>Web Development</span><br>Web app Development</li>
-                            <li><span>App Development</span><br>Building Android/IOS apps</li>
+                            <li><span>2020</span><br>Lorem ipsum.</li>
+                            <li><span>2016-2018</span><br>Lorem ipsum dolor, sit </li>
+                            <li><span>2014</span><br>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
+    </div> 
+
+    
+
+ <!--------------------This is the Services section--------------------------------->    
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Development</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum nam eos aliquid, autem accusantium quidem nesciunt natus. Ducimus voluptatibus repellat numquam doloribus cupiditate eos laboriosam dignissimos temporibus soluta esse. Quisquam?q</p>
+                    <a href='#'>Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum nam eos aliquid, autem accusantium quidem nesciunt natus. Ducimus voluptatibus repellat numquam doloribus cupiditate eos laboriosam dignissimos temporibus soluta esse. Quisquam?q</p>
+                    <a href='#'>Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store-ios"></i>
+                    <h2>App Design</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum nam eos aliquid, autem accusantium quidem nesciunt natus. Ducimus voluptatibus repellat numquam doloribus cupiditate eos laboriosam dignissimos temporibus soluta esse. Quisquam?q</p>
+                    <a href='#'>Learn more</a>
+                </div>
+                
+            </div>
+        </div>
     </div>
+
+<!---------------------This is the My Work section-------------------------------> 
+<div id="Portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work-1.png">
+                <div class="layer">
+                    <h3>Social Media App</h3>
+                    <p>Lorem ipsum dolor sit amet consectLorem ipsum dolor sit amet consectetur adipisi tur adipisi tur adipisitur adipisi tur adipisietur adipisi</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-2.png">
+                <div class="layer">
+                    <h3>Music App</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisi Lorem ipsum dolor sit amet consectetur adipisi tur adipisi tur adipisitur adipisi tur adipisi</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>    
+            </div>
+            <div class="work">
+                <img src="images/work-3.png">
+                <div class="layer">
+                    <h3>Online Shop</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisi tur adipisi tur adipisitur adipisi tur adipisi</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href='#' class="btn">See more</a>
+    </div>
+</div>
+
+<!---------------------This is the Contact section---------------------------------->  
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title"> Contact Me </h1>
+                <p><i class="fa-solid fa-paper-plane"></i>Contact@example.nl</p>
+                <p><i class="fa-solid fa-phone"></i>0612345678</p>
+                <div class="social-icons">
+                    <a href="https://fa-facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter-square"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="images/my-cv.pdf" download class="btn btn2">Download Cv</a>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea type="Message" rows="6" placeholder="Your Message" ></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright C Pietje. Made with <i class="fa-solid fa-heart"></i> by Me</p>
+    </div>
+</div>
+
+<!---------------------This is the JavaScript section------------------------------->  
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
+</script>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
 
 </body>
 </html>
